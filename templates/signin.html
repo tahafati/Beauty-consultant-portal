@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static  %}
+<head>
+    <meta charset="utf-8">
+    <title>Crystal Consultant</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="{% static 'lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css'%} " rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %} " rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+</head>
+
+<body style="background-color:white;">
+    <style>
+        .glow {
+            font-size: 25px;
+            color: #FF69B4;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+          }
+          @-webkit-keyframes glow {
+            from {
+              text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+            to {
+              text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+          }
+    
+        </style>
+ 
+    {% include "myheader.html" %}
+
+    <!-- Header Start -->
+    
+    <!-- Header End -->
+
+
+    <!-- Contact Start -->
+
+
+    <div class="container-fluid pt-5" style="background:url('/static/img/contactbg.png')">
+        <div class="container">
+            <div class="text-center pb-2">
+                <h5 class="glow">SIGN IN</h5>
+            
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 mb-5"></div>
+                <div class="col-lg-6 mb-5">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form method="post" action="/checkregis">
+                            {% csrf_token %}
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="uid" placeholder="Username" >
+                                 <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="password" class="form-control" name="ps" placeholder="Password" >
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button   class="btn btn-primary py-2 px-4" type="submit" name='log'>Login</button>
+                        
+                        </div>
+                        </form>
+                        <br>
+                        <br>
+                
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+    {% include "myfooter.html" %}
+</body>
+
+</html>

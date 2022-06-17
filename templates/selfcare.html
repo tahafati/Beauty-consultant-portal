@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static  %}
+<head>
+    <meta charset="utf-8">
+    <title>Crystal Consultant</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="{% static 'lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css'%} " rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %} " rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+</head>
+
+<body style="background-color:#FFF0F5;">
+    <style>
+     
+        .glow {
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+          }
+          
+          @-webkit-keyframes glow {
+            from {
+              text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+            to {
+              text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+          }
+          h1 {
+            font-size: 30px;
+          }
+          
+        </style>
+ 
+    {% include "myheader.html" %}
+
+    <!-- Header Start -->
+    
+    <!-- Header End -->
+
+
+    <!-- Contact Start -->
+    <div class="jumbotron jumbotron-fixed" style="background:url('/static/img/indexpage.jpg')">
+        <div class="container">
+          <h1 class="glow">“Create your own sunshine.”</h1>
+          <p class="lead">.</p>
+        </div>
+    </div>
+    <!--CARD-->
+    <div class="card mb-3">
+        <img class="card-img-top" src="/static/img/selfcare.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h3 class="card-title">How to start the journey</h3>
+          <p><strong>If you’re wondering where to start, look for something that you’ve always wanted to do or maybe something you feel you need to do, like an exercise routine. And when you start, do so with very clear goals in mind, following the S-M-A-R-T concept:</strong></p>
+
+          <p><h5>Specific: Identify the details about your goals.</h5></p>
+          <p><h5>Measurable: Decide how progress will be measured.</h5></p>
+          <p><h5>Achievable: Set realistic goals.</h5></p>
+          <p><h5>Relevant: The change will make a difference.</h5></p>
+          <p><h5>Time-bound: Set a realistic timeframe.</h5></p>
+<p>It also suggests looking at replacing current routines or behaviors with better ones. “Maybe it’s replacing a habit or routine you’d like to change, like eating healthier snacks,” It says. “Look at those things at first, things that are simpler to do, and build momentum for larger things off that success.”</p>
+
+<p>The best way to think about self-care activities, It is said that, is in layers. “Practicing self-care every day is important,” he notes. “Daily activities should be different than activities you do weekly, monthly and even yearly.”</p>
+
+<p>Think of it like this, he advises, start with your daily self-care routine like meditating, a bath or a form of exercise. Next, focus on something you can do weekly, like catching up on a favorite television show or exercise class. Then, be sure you’re doing something on a slightly bigger scale once a month, like going out with friends or a spa day. Then, set a goal to do something big each year, like a vacation.</p>
+
+<p>Those layers provide both short-term and long-term goals to keep you motivated while also providing those rewarding self-care experiences regularly.</p>
+
+<p><h4>How long does it take to establish a self-care routine?</h4></p>
+<p>Over the years, the idea that it takes doing something for 21 days to establish it as a routine has taken hold. But, says Dr. Sacco, that’s incorrect; that number was taken out of context from an old study. The truth is a bit longer.</p>
+
+<p><h5>“According to more recent research, it can take between around 18 to 250 days to develop a habit with the average being around 66 days,” he says. “But that’s not a one-size-fits-all number. It can vary from person to person and some habits are easier to start than others.”</h5></p>
+
+<p><h4>Don’t stress over lapses</h4></p>
+<p>It’s important to remember that your own pace can ebb and flow as you try to establish these routines and not to get too stressed if you hit a rough patch or a lapse. After all, these are routines that should make your life less stressful.</p>
+
+<p>“Lapses are going to happen,” says Dr. Sacco. “So it’s really important to be forgiving of yourself when it happens.” Those lapses can be for any number of reasons: a change to your schedule, other priorities or demands of your time or sometimes just giving yourself a break.</p>
+
+<p>Whatever the case is for you, Dr. Sacco stresses that it’s important to adapt to a new routine instead of giving up. “Adapt to your new circumstances, reprioritize things and figure out that new routine. Sometimes you have to adjust along the way.”</p>
+
+The bottom line is that your self-care routine is something deliberate and important to you that can provide a refreshed sense of self. “You have to know yourself because what may work for you, like a spa day, may not work for someone else,” he says. “High levels of self-awareness and flexibility can really improve this process and understanding what is meaningful to you.”
+         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+     
+    
+    
+    <!-- Contact End -->
+    {% include "myfooter.html" %}
+</body>
+
+</html>

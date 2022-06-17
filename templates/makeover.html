@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static  %}
+<head>
+    <meta charset="utf-8">
+    <title>Crystal Consultant</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="{% static 'lib/flaticon/font/flaticon.css'%}" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css'%} " rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %} " rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+</head>
+
+<body style="background-color:#FFF0F5;">
+    <style>
+     
+        .glow {
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+          }
+          
+          @-webkit-keyframes glow {
+            from {
+              text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+            to {
+              text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+          }
+          h1 {
+            font-size: 30px;
+          }
+          
+        </style>
+ 
+    {% include "myheader.html" %}
+
+    <!-- Header Start -->
+    
+    <!-- Header End -->
+
+
+    <!-- Contact Start -->
+    <div class="jumbotron jumbotron-fixed" style="background:url('/static/img/indexpage.jpg')">
+        <div class="container">
+          <h1 class="glow">“A Little contour and Confidence.”</h1>
+          <p class="lead">.</p>
+        </div>
+    </div>
+    <!--CARD-->
+    <div class="card mb-3">
+        <img class="card-img-top" src="/static/img/makeover1.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h3 class="card-title">All the Tips and Tricks</h3>
+          <p class="card-text">Makeup application comes easy to some, while the others struggle to draw a simple wing across their lid. If you belong to the latter category, we’ve got you covered. Makeup does not have to be as hard as the experts make it seem, there are many ways in which you can ace the makeup game.</p>
+        <p>We’ve curated a list of easy makeup tips and tricks that can help the beginners to apply makeup hassle-free. If teenagers on YouTube can do it, so can you. Before we begin with the detailed list of tips and tricks, these hacks will have something for everyone to take away. If you’re a pro at makeup, these simple tricks and tips will help you save some much-needed time.</p>
+         <p>The tips and tricks of the makeup trade will not only make your life easier and save you time, but it will also help you save a lot of money. Other than teaching you how to apply makeup in an easier manner, these tips and tricks will also educate you about how to make a product multipurpose. For example, your eyeshadow palette can also be also used as a colour corrector. When you blend your highlighter and foundation together it works as a glowing liquid strobe. The shiny lip glosses can also be used as pigmented, glittering eyeshadows, while the lip liners can be used as matte eyeshadows.</p> 
+        <p><h4> Blend Your Foundation With A Liquid Primer</h4></p>
+        <p>Blend Your Foundation with a liquid primer for an easy blend, which will also give you a natural dewy glow.</p>
+        <p><h4>Eye Makeup Before Base</h4></p>
+        <p>Do your eye makeup before you do your base. When you apply eye makeup the residue tends to fall on your cheek area and under-eye, which will ruin your base. Therefore, start your makeup by doing your eyes first.</p>
+        <p><h4> Use A Spoon As A Stencil</h4></p>
+        <p>Use a spoon a stencil to do your winged eyeliner. Use the curved area of your spoon as a tool to get that perfect curve, by adjusting it correctly over your lid. You can also use a spoon a shield while applying your mascara.</p>
+        <p><h4> Conceal Your Eyelids</h4></p>
+        <p>Conceal your eyes before you do your eye makeup for a better look. By applying concealer on your upper eyelid, you are correcting the dark and discoloured area on your eye and creating an even base for the eyeshadow application</p>
+        <p><h4> Conceal Under Eye In A Triangular Shape</h4></p>
+        <p>Create a triangle under your eye with your concealer, to blend it the right and even way.</p>
+        <p><h4> Colour Corrector Under Your Foundation</h4></p>
+        <p>Indian skin is highly pigmented, which is why a colour corrector is one of the most important product in the kit. Apply colour corrector under your foundation to reduce the dark pigmentation around your mouth and under the eye. The orange shade in your colour corrector palette will help you even out your skin when layered perfectly under concealer and foundation</p>
+        <p><h4> De Clamp Your Eyelashes With Tissue Paper</h4></p>
+        <p>De clamp your eyelashes after applying the mascara using a tissue paper. The product can make your eyelashes stick together, therefore, use a tissue paper to get the excess out and have a fuller eyelash look</p>
+      
+
+        
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+     
+     
+    
+     
+    
+    
+
+
+        
+    
+    <!-- Contact End -->
+    {% include "myfooter.html" %}
+</body>
+
+</html>

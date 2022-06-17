@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title> Crystal Consultant</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+</head
+
+<body style="background-color:white;">
+    <style>
+      .glow {
+          font-size: 40px;
+          color: #fff;
+          text-align:left;
+          -webkit-animation: glow 1s ease-in-out infinite alternate;
+          -moz-animation: glow 1s ease-in-out infinite alternate;
+          animation: glow 1s ease-in-out infinite alternate;
+        }
+        
+        @-webkit-keyframes glow {
+          from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+          }
+          to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+          }
+        }
+        h1 {
+          font-size: 30px;
+        }
+        
+      </style>
+    
+    {% include "myheader.html" %}
+  
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary px-0 px-md-5 mb-6"style="background:url('/static/img/indexpage.jpg')">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left">
+                <h4 class="text-white mb-4 mt-5 mt-lg-0"> </h4>
+                <h1 class="glow">Beauty pronounced.</h1>
+                <p class="text-white mb-4">Welcome to Crystal Consultant's, here we provide you with the facility of all the services required for everything Beauty.
+                    
+                </p>
+                <a href="/abouts"  style='color:white'"btn btn-primary mt-1 py-3 px-5">Learn More</a>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <img class="img-fluid mt-5" src="static/img/miley.png" alt="header">
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+
+
+    <!-- Class Start -->
+    <div class="container-fluid pt-5"style="background-color:#FFF0F5;">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5" style='font-family:sans;'><span class="px-2"> Beauty Consultant nearest your city</span></p>
+                <h1 class="mb-4" style='font-family:sans;'>Beauty Consultants Available Here</h1>
+                <form action = '/searchdata ' method= 'POST'>
+                     {% csrf_token %}
+                     <div class="row">
+                    <div class="col-lg-3 mb-5"></div>
+                    <div class="col-lg-5 mb-5">
+                        <div class="control-group">
+                            <select class="form-control" name="city">
+                                <option value=''>Select City</option>
+                                <option value='Raipur'>Raipur</option>
+                                <option value='Bhilai'>Bhilai</option>
+                                <option value='Durg'>Durg</option>
+                                <option value='Kumhari'>Kumhari</option>
+                                <option value='Dhamtari'>Dhamtari</option>
+                                <option value='Korba'>Korba</option>
+                                
+                            </select>
+                             <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 mb-5">
+                            <button class="btn btn-secondary py-2 px-4" type="submit" name='log'>Search</button>
+                           
+                       </div>
+                </div>
+            </div>
+        </form>
+            <div class="row">
+                {% for i in data %}
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-1 bg-light shadow-sm pb-4">
+                        <div class="card-body text-center" style="background-color:#FF69B4;">
+                            <h4 class="card-title">{{i.bname}}</h4>
+                            <img src='static/upload/{{i.img}}' width='200'  height='180'>
+                        </div>
+                        <div class="card-footer bg-white py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-5 py-1 text-right border-right"><strong>Name</strong></div>
+                                <div class="col-7 py-1">{{i.cname}}</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-5 py-1 text-right border-right"><strong>Mobile</strong></div>
+                                <div class="col-7 py-1">{{i.cnum}}</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-5 py-1 text-right border-right"><strong>Email</strong></div>
+                                <div class="col-7 py-1">{{i.eml}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5 py-1 text-right border-right"><strong>Address</strong></div>
+                                <div class="col-7 py-1">{{i.adrs}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5 py-1 text-right border-right"><strong>City</strong></div>
+                                <div class="col-7 py-1">{{i.city}}</div>
+                            </div>
+                        </div>
+                        <a href="enquiry/{{i.eml}}" class="btn btn-primary px-4 mx-auto mb-4">ENQUIRY</a>
+                    </div>
+                </div>
+                {% endfor %}
+                </div>
+        </div>
+    </div>
+    <!-- Class End -->
+
+
+    <!-- Registration Start -->
+   
+    <!-- Blog End -->
+    {% include "myfooter.html" %}
+
+
+</body>
+
+</html>

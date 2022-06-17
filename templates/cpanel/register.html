@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title> Crystal Consultant</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="" rel="icon">
+
+    
+</head
+
+<body>
+    <style>
+        .glow {
+            font-size: 25px;
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+          }
+          @-webkit-keyframes glow {
+            from {
+              text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+            to {
+              text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+          }
+    
+        </style>
+    {% include 'cpanel/adminheader.html' %}
+
+
+    <!-- registration form start -->
+
+    <div class="container-fluid pt-5" style="background:url('/static/img/contactbg.png')">
+        <div class="container">
+            <div class="text-center pb-2">
+            <h5 class="glow">REGISTER BUSINESS</h5>
+                
+            
+            </div>
+            <div class="row">
+                <div class="col-lg-3 mb-5"></div>
+                <div class="col-lg-6 mb-5">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form method="post" action="/insertuser" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="un" placeholder="Business Name/ Title" >
+                                 <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="cp" required placeholder="Contact person" >
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="ct" placeholder="Contact" >
+                                 <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" name="em" placeholder="Email" >
+                                 <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group"><div class="control-group">
+                                <input type="password" class="form-control" name="ps" placeholder="Password" >
+                                 <p class="help-block text-danger"></p>
+                            </div>
+                                <input type="text" class="form-control" name="ad" placeholder="Address" >
+                                 <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="file" class="form-control" name="li" placeholder="Logo/image" >
+                                 <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <select class="form-control" name="city"  >
+                                    <option value=''>Select City</option>
+                                    <option value='Raipur'>Raipur</option>
+                                    <option value='Bhilai'>Bhilai</option>
+                                    <option value='Durg'>Durg</option>
+                                    <option value='Kumhari'>Kumhari</option>
+                                    <option value='Dhamtari'>Dhamtari</option>
+                                    <option value='Korba'>Korba</option>
+                                    
+                                </select>
+                                 <p class="help-block text-danger"></p>
+                            </div>
+                     
+                     
+                            <div>
+                                <button class="btn btn-primary py-2 px-4" type="submit" name='log'>submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <!-- registration form end -->
+
+
+  
+
+
+   
+    <!-- About End -->
+    {% include 'myfooter.html' %}
+
+</body>
+
+</html>
